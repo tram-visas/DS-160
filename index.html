@@ -70,8 +70,8 @@
 
                     <div class="mb-3">
                         <label for="nombre" class="form-label"><strong>Nombre completo:</strong></label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa nombre comenzando por apellidos"
-                            required>
+                        <input type="text" class="form-control" id="nombre"
+                            placeholder="Ingresa nombre comenzando por apellidos" required>
                     </div>
 
                     <div class="row mb-3">
@@ -118,8 +118,8 @@
 
                     <div class="mb-3">
                         <label for="curp" class="form-label"><strong>CURP:</strong></label>
-                        <input type="text" class="form-control" id="curp" placeholder="Ingresa la CURP" maxlength="18"
-                            oninput="validarInput(this)" onkeyup="convertToUpperCase()">
+                        <input type="text" class="form-control" id="curp" placeholder="Ingresa la CURP" minlength="18"
+                            maxlength="18" oninput="validarInput(this)" onkeyup="convertToUpperCase()">
                         <div class="alert alert-success" id="resultado">
                             Ingresa una CURP válida
                         </div>
@@ -159,13 +159,13 @@
                             <label for="telefono" class="form-label"><strong>Número de Teléfono:</strong></label>
                             <input type="text" class="form-control" id="telefono"
                                 onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"
-                                maxlength="10" placeholder="Ingrese el número de télefono">
+                                minlength="10" maxlength="10" placeholder="Ingrese el número de télefono">
                         </div>
                         <div class="col-md-6">
                             <label for="telefono_alt" class="form-label"><strong>Número Alterno:</strong></label>
                             <input type="text" class="form-control" id="telefono_alt"
                                 onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"
-                                maxlength="10" placeholder="Teléfono de algún familiar">
+                                minlength="10" maxlength="10" placeholder="Teléfono de algún familiar">
                         </div>
                     </div>
 
@@ -219,7 +219,7 @@
                     <hr>
 
                     <div class="mb-3">
-                        <label for="titulo" class="form-label"><strong>Titulo profesional:</strong></label>
+                        <label for="titulo" class="form-label"><strong>Título profesional:</strong></label>
                         <input type="text" class="form-control" id="titulo"
                             placeholder="Ingresa la profesión del solicitante">
                     </div>
@@ -240,7 +240,7 @@
                             <label for="numero_escuela" class="form-label"><strong>Número de contacto:</strong></label>
                             <input type="text" class="form-control" id="numero_escuela"
                                 onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"
-                                maxlength="10" placeholder="Número de teléfono de la institución">
+                                minlength="10" maxlength="10" placeholder="Número de teléfono de la institución">
                         </div>
                     </div>
 
@@ -266,7 +266,7 @@
                                     contacto:</strong></label>
                             <input type="text" class="form-control" id="numero_conocido"
                                 onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"
-                                maxlength="10" placeholder="Número de teléfono del contacto en EE.UU.">
+                                minlength="10" maxlength="10" placeholder="Número de teléfono del contacto en EE.UU.">
                         </div>
                     </div>
 
