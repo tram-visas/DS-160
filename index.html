@@ -32,11 +32,11 @@
         }
 
         .boton:hover {
-            background-color: #094e6d
+            background-color: #0b7aae
         }
 
         #resultado {
-            background-color: rgb(226, 82, 82);
+            background-color: rgb(238, 95, 95);
             color: white;
             font-weight: bold;
             border: none;
@@ -45,7 +45,7 @@
         }
 
         #resultado.ok {
-            background-color: rgb(99, 208, 99);
+            background-color: rgb(67, 163, 67);
         }
     </style>
 </head>
@@ -71,7 +71,8 @@
                     <div class="mb-3">
                         <label for="nombre" class="form-label"><strong>Nombre completo:</strong></label>
                         <input type="text" class="form-control" id="nombre"
-                            placeholder="Ingresa nombre comenzando por apellidos" required>
+                            placeholder="Ingresa nombre comenzando por apellidos" onkeyup="convertToUpperCase()"
+                            required>
                     </div>
 
                     <div class="row mb-3">
@@ -84,7 +85,7 @@
                             <label for="lugar_nacimiento" class="form-label"><strong>Lugar de
                                     nacimiento:</strong></label>
                             <input type="text" class="form-control" id="lugar_nacimiento"
-                                placeholder="Municipio de nacimiento">
+                                placeholder="Municipio de nacimiento" onkeyup="convertToUpperCase()">
                         </div>
                     </div>
 
@@ -100,7 +101,7 @@
                             <label for="lugar_expedicion" class="form-label"><strong>Lugar de
                                     expedición:</strong></label>
                             <input type="text" class="form-control" id="lugar_expedicion"
-                                placeholder="Ingresa el lugar de expedición">
+                                placeholder="Ingresa el lugar de expedición" onkeyup="convertToUpperCase()">
                         </div>
                     </div>
 
@@ -131,12 +132,12 @@
                         <div class="col-md-6">
                             <label for="domicilio" class="form-label"><strong>Calle:</strong></label>
                             <input type="text" class="form-control" id="domicilio"
-                                placeholder="Nombre de la calle o avenida">
+                                placeholder="Nombre de la calle o avenida" onkeyup="convertToUpperCase()">
                         </div>
                         <div class="col-md-6">
                             <label for="numero_casa" class="form-label"><strong>Número exterior:</strong></label>
                             <input type="text" class="form-control" id="numero_casa"
-                                placeholder="Número exterior o interior">
+                                placeholder="Número exterior o interior" onkeyup="convertToUpperCase()">
                         </div>
                     </div>
 
@@ -144,7 +145,7 @@
                         <div class="col-md-6">
                             <label for="colonia" class="form-label"><strong>Municipio o colonia:</strong></label>
                             <input type="text" class="form-control" id="colonia"
-                                placeholder="Municipio, colonia o barrio">
+                                placeholder="Municipio, colonia o barrio" onkeyup="convertToUpperCase()">
                         </div>
                         <div class="col-md-6">
                             <label for="cp" class="form-label"><strong>CP:</strong></label>
@@ -174,7 +175,8 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="papa" class="form-label"><strong>Nombre del Padre:</strong></label>
-                            <input type="text" class="form-control" id="papa" placeholder="Nombre completo del padre">
+                            <input type="text" class="form-control" id="papa" placeholder="Nombre completo del padre"
+                                onkeyup="convertToUpperCase()">
                         </div>
                         <div class="col-md-6">
                             <label for="fecha_papa" class="form-label"><strong>Fecha de nacimiento:</strong></label>
@@ -186,7 +188,8 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="mama" class="form-label"><strong>Nombre de la Madre:</strong></label>
-                            <input type="text" class="form-control" id="mama" placeholder="Nombre completo de la madre">
+                            <input type="text" class="form-control" id="mama" placeholder="Nombre completo de la madre"
+                                onkeyup="convertToUpperCase()">
                         </div>
                         <div class="col-md-6">
                             <label for="fecha_mama" class="form-label"><strong>Fecha de nacimiento:</strong></label>
@@ -199,7 +202,7 @@
                         <div class="col-md-6">
                             <label for="esposo" class="form-label"><strong>Nombre esposa(o):</strong></label>
                             <input type="text" class="form-control" id="esposo"
-                                placeholder="Nombre completo del esposa(o)">
+                                placeholder="Nombre completo del esposa(o)" onkeyup="convertToUpperCase()">
                         </div>
                         <div class="col-md-6">
                             <label for="fecha_esposo" class="form-label"><strong>Fecha de nacimiento:</strong></label>
@@ -213,7 +216,7 @@
                     <div class="mb-3">
                         <label for="trabajo" class="form-label"><strong>Trabajo o oficio:</strong></label>
                         <input type="text" class="form-control" id="trabajo"
-                            placeholder="Describe a que se dedica el solicitante">
+                            placeholder="Describe a que se dedica el solicitante" onkeyup="convertToUpperCase()">
                     </div>
 
                     <hr>
@@ -221,7 +224,7 @@
                     <div class="mb-3">
                         <label for="titulo" class="form-label"><strong>Título profesional:</strong></label>
                         <input type="text" class="form-control" id="titulo"
-                            placeholder="Ingresa la profesión del solicitante">
+                            placeholder="Ingresa la profesión del solicitante" onkeyup="convertToUpperCase()">
                     </div>
 
                     <!--                     <div class="mb-3">
@@ -234,7 +237,8 @@
                         <div class="col-md-6">
                             <label for="escuela" class="form-label"><strong>Institución del último grado de
                                     estudios:</strong></label>
-                            <input type="text" class="form-control" id="escuela" placeholder="Nombre de la institución">
+                            <input type="text" class="form-control" id="escuela" placeholder="Nombre de la institución"
+                                onkeyup="convertToUpperCase()">
                         </div>
                         <div class="col-md-6">
                             <label for="numero_escuela" class="form-label"><strong>Número de contacto:</strong></label>
@@ -249,7 +253,7 @@
                         <label for="direccion_escuela" class="form-label"><strong>Dirección de la
                                 institución:</strong></label>
                         <input type="text" class="form-control" id="direccion_escuela"
-                            placeholder="Ingresa datos de estudios del solicitante">
+                            placeholder="Ingresa datos de estudios del solicitante" onkeyup="convertToUpperCase()">
                     </div>
 
                     <hr>
@@ -259,7 +263,7 @@
                             <label for="conocido" class="form-label"><strong>Nombre del familiar o conocido en
                                     EE.UU:</strong></label>
                             <input type="text" class="form-control" id="conocido"
-                                placeholder="Nombre del contacto en EE.UU.">
+                                placeholder="Nombre del contacto en EE.UU." onkeyup="convertToUpperCase()">
                         </div>
                         <div class="col-md-6">
                             <label for="numero_conocido" class="form-label"><strong>Número del
@@ -275,7 +279,7 @@
                         <label for="direccion_conocido" class="form-label"><strong>Dirección del contacto en
                                 EE.UU:</strong></label>
                         <input type="text" class="form-control" id="direccion_conocido"
-                            placeholder="Ingresa la dirección del contacto en EE.UU.">
+                            placeholder="Ingresa la dirección del contacto en EE.UU." onkeyup="convertToUpperCase()">
                     </div>
 
                     <!--                     <hr>
